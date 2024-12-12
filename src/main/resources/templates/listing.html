@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="task : ${tasks}">
+                <td th:text="${task.id}"></td>
+                <td th:text="${task.name}"></td>
+                <td th:text="${task.description}"></td>
+                <td th:text="${task.simpleDueDate}"></td>
+                <td th:text="${task.priorityLevel}"></td>
+                <td th:text="${task.status}"></td>
+                <td th:text="${task.simpleCreatedAt}"></td>
+                <td th:text="${task.simpleUpdatedAt}"></td>
+            </tr>
+        </tbody>
+    </Table>
+</body>
+</html>
+

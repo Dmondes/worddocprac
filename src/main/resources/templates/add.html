@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/add" method="post" th:object="${task}">
+        <label for="name">Name</label>
+        <input type="text" th:field="*{name}" name="name" placeholder="Name">
+        <label for="description">Description</label>
+        <input type="text" th:field="*{description}" name="description" placeholder="Description">
+        <label for="dueDate">Due Date</label>
+        <input type="date" th:field="*{dueDate}" name="dueDate" placeholder="Due Date">
+        <label for="radio">Priority Level</label>
+        <input type="radio" th:field="*{priorityLevel}" name="priorityLevel" value="Low">Low
+        <input type="radio" th:field="*{priorityLevel}" name="priorityLevel" value="Medium">Medium
+        <input type="radio" th:field="*{priorityLevel}" name="priorityLevel" value="High">High
+        <label for="status">Status</label>
+        <input type="radio" th:field="*{status}" name="status" value="Pending">Pending
+        <input type="radio" th:field="*{status}" name="status" value="Started">Started
+        <input type="radio" th:field="*{status}" name="status" value="Progress">Progress
+        <input type="radio" th:field="*{status}" name="status" value="Completed">Completed
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
